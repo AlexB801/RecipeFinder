@@ -5,6 +5,13 @@ class RecipesController < ApplicationController
         query: params[:query],
         ingredients: params[:ingredients])
 
-    render :index, locals: { recipes: recipes }, layout: false
+    render :index, locals: { recipes: recipes }
+
+    # @recipes = Recipe.all
+    # if params[:search]
+    #   @recipes = Recipe.search(params[:search])
+    # else
+    #   @recipes = Recipe.all
+    # end
   end
 end
